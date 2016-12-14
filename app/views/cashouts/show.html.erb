@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cashout.date %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @cashout.branch %>
+</p>
+
+<p>
+  <strong>Salesperson:</strong>
+  <%= @cashout.salesperson %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @cashout.rate %>
+</p>
+
+<%= link_to 'Edit', edit_cashout_path(@cashout) %> |
+<%= link_to 'Back', cashouts_path %>

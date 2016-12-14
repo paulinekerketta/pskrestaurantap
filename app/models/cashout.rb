@@ -1,0 +1,2 @@
+class Cashout < ApplicationRecord
+end

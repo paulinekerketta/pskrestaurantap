@@ -1,0 +1,37 @@
+<%= form_for(cashout) do |f| %>
+  <% if cashout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cashout.errors.count, "error") %> prohibited this cashout from being saved:</h2>
+
+      <ul>
+      <% cashout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :branch %>
+    <%= f.text_field :branch %>
+  </div>
+
+  <div class="field">
+    <%= f.label :salesperson %>
+    <%= f.text_field :salesperson %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rate %>
+    <%= f.text_field :rate %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
